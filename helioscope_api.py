@@ -13,10 +13,11 @@ import io
 import itertools
 import numpy as np
 import pprint
+import streamlit as st
 
 class HelioscopeService:
     def __init__(self):
-        self.access_token = "oDBWXKNG0RB3e5XrRKDwhd5cKsDS0Z9Wtj3iWvvohO2v906A"
+        self.access_token = st.secrets['helio_access']
         self.base_url = "https://www.helioscope.com/api/"
     
     def get_projects(self):
